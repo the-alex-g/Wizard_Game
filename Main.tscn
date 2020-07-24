@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 3.33217, 0.5, 0 )
