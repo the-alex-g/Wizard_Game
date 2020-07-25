@@ -5,7 +5,7 @@ onready var _animation:AnimationPlayer = $AnimationPlayer
 onready var _mesh:MeshInstance = $Node/Skeleton/Mesh
 export var speed = 200
 var _casting := false
-var spell := {"fire":0, "cold":0, "water":0, "shock":0, "heal":0, "protect":0, "earth":0, "air":0}
+var spell := {"FIRE":0, "COLD":0, "WATER":0, "SHOCK":0, "HEAL":0, "PROTECT":0, "EARTH":0, "AIR":0}
 var state = State.IDLE
 
 func _physics_process(delta):
