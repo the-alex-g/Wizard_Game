@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/Main.gd" type="Script" id=2]
+[ext_resource path="res://Main/HUD.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 3.33217, 0.5, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+[connection signal="word_changed" from="." to="HUD" method="_on_Main_word_changed"]
+[connection signal="summoned_element" from="HUD" to="." method="_on_HUD_summoned_element"]
