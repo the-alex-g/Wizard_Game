@@ -4,6 +4,7 @@ onready var _player = $Player
 var casting := false
 var current_word := ""
 signal word_changed(word)
+signal update_spell(spell)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Cast_mode"):
@@ -65,6 +66,8 @@ func _process(_delta):
 			current_word.erase(current_word.length()-1,1)
 		emit_signal("word_changed", current_word)
 
-
 func _on_HUD_summoned_element():
 	current_word = ""
+
+func _on_HUD_update_spell(spell):
+	emit_signal("update_spell", spell)

@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Wizard_Game"
+run/main_scene="res://Main/Main.tscn"
 
 [input]
 

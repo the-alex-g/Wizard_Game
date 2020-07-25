@@ -17,5 +17,7 @@ material/0 = null
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 3.33217, 0.5, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
+[connection signal="update_spell" from="." to="Player" method="_on_Main_update_spell"]
 [connection signal="word_changed" from="." to="HUD" method="_on_Main_word_changed"]
 [connection signal="summoned_element" from="HUD" to="." method="_on_HUD_summoned_element"]
+[connection signal="update_spell" from="HUD" to="." method="_on_HUD_update_spell"]

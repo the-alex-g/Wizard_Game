@@ -37,3 +37,6 @@ func _get_animation():
 	if state == State.CASTING:
 		_new_anim = "Cast"
 	return _new_anim
+
+func _on_Main_update_spell(newspell):
+	spell = newspell
