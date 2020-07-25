@@ -32,7 +32,7 @@ func _on_Main_word_changed(word):
 				mod = Color(1,0.84,0,1)
 			if word == "EARTH":
 				mod = Color(0.55,0.27,0.07,1)
-			if icon1.modulate == Color(1,1,1,1) and icon2.modulate == Color(1,1,1,1):
+			if icon1.modulate == Color(1,1,1,1):
 				icon1.modulate = mod
 			elif icon1.modulate != Color(1,1,1,1) and icon2.modulate == Color(1,1,1,1):
 				icon2.modulate = mod

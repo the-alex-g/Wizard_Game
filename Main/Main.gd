@@ -5,10 +5,12 @@ var casting := false
 var current_word := ""
 signal word_changed(word)
 signal update_spell(spell)
+signal casting(value)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Cast_mode"):
 		casting = !casting
+		emit_signal("casting", casting)
 	if casting:
 		if Input.is_action_just_pressed("A"):
 			current_word += "A"
