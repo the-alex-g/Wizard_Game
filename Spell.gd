@@ -3,7 +3,7 @@ extends Area
 onready var _sphere:MeshInstance = $MeshInstance
 onready var _particles1 = $MeshInstance/CPUParticles
 onready var _particles2 = $MeshInstance/CPUParticles2
-var spell := {"FIRE":1, "COLD":0, "WATER":0, "SHOCK":1, "HEAL":0, "PROTECT":0, "EARTH":1, "AIR":0}
+var spell := {"FIRE":0, "COLD":0, "WATER":0, "SHOCK":0, "HEAL":0, "PROTECT":0, "EARTH":0, "AIR":0}
 var speed := 400
 
 func _ready():
