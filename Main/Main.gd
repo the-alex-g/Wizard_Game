@@ -6,6 +6,7 @@ var current_word := ""
 signal word_changed(word)
 signal update_spell(spell)
 signal casting(value)
+signal wipe_spell
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Cast_mode"):
@@ -73,3 +74,6 @@ func _on_HUD_summoned_element():
 
 func _on_HUD_update_spell(spell):
 	emit_signal("update_spell", spell)
+
+func _on_Player_spell_used():
+	emit_signal("wipe_spell")

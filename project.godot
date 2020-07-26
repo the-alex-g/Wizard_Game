@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Wizard_Game"
 run/main_scene="res://Main/Main.tscn"
 
+[autoload]
+
+PlayerVar="*res://PlayerVar.gd"
+
 [input]
 
 Left={

@@ -22,32 +22,32 @@ func _ready():
 		_particles2.emitting = true
 	elif _spell_strength == 2:
 		_particles1.emitting = true
-	for x in range(0,spell["EARTH"]-1):
+	for _x in range(0,spell["EARTH"]-1):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(0.55,0.27,0.07,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(0.55,0.27,0.07,1)
-	for x in range(0,spell["AIR"]-1):
+	for _x in range(0,spell["AIR"]-1):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(0.75,0.75,0.75,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(0.75,0.75,0.75,1)
-	for x in range(0,spell["WATER"]):
+	for _x in range(0,spell["WATER"]):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(0,0,1,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(0,0,1,1)
-	for x in range(0,spell["SHOCK"]):
+	for _x in range(0,spell["SHOCK"]):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(1,0,1,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(1,0,1,1)
-	for x in range(0,spell["FIRE"]):
+	for _x in range(0,spell["FIRE"]):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(1,0,0,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(1,0,0,1)
-	for x in range(0,spell["COLD"]):
+	for _x in range(0,spell["COLD"]):
 		if _particles1.material_override.albedo_color == Color(1,1,1,1):
 			_particles1.material_override.albedo_color = Color(0,1,1,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
