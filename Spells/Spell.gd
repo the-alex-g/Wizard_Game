@@ -1,3 +1,4 @@
+class_name Bolt
 extends Area
 
 onready var _sphere:MeshInstance = $MeshInstance
@@ -5,13 +6,14 @@ onready var _particles1 = $MeshInstance/CPUParticles
 onready var _particles2 = $MeshInstance/CPUParticles2
 var spell := {"FIRE":0, "COLD":0, "WATER":0, "SHOCK":0, "HEAL":0, "PROTECT":0, "EARTH":0, "AIR":0}
 var speed := 400
+var _velocity:= Vector3(0,1,0)
 
 func _ready():
 	var _spell_strength:int
 	_spell_strength = spell["FIRE"]+spell["EARTH"]+spell["COLD"]+spell["HEAL"]+spell["AIR"]+spell["PROTECT"]+spell["SHOCK"]+spell["WATER"]
-	var size := 0.1
+	var size := 0.02
 	for _x in _spell_strength-1:
-		size += 0.05
+		size += 0.01
 	_sphere.scale = Vector3(size,size,size)
 	if spell["EARTH"] > 0:
 		_sphere.material_override.albedo_color = Color(0.55,0.27,0.07,1)
@@ -52,3 +54,6 @@ func _ready():
 			_particles1.material_override.albedo_color = Color(0,1,1,1)
 		elif _particles2.material_override.albedo_color == Color(1,1,1,1):
 			_particles2.material_override.albedo_color = Color(0,1,1,1)
+
+#func _process(delta):
+#	translation += _velocity*delta*speed

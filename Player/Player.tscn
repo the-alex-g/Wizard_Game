@@ -9,9 +9,9 @@ extents = Vector3( 0.0560939, 0.103407, 0.0454413 )
 [sub_resource type="SpatialMaterial" id=2]
 
 [sub_resource type="CylinderMesh" id=3]
-top_radius = 0.005
-bottom_radius = 0.005
-height = 0.1
+top_radius = 0.003
+bottom_radius = 0.003
+height = 0.05
 
 [sub_resource type="SpatialMaterial" id=4]
 

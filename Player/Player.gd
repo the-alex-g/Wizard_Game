@@ -63,7 +63,16 @@ func _attack():
 	var _is_self := true if spell["HEAL"] > 0 or spell["PROTECT"] > 0 else false
 	if _is_self:
 		_spell_self()
+	elif _is_bolt:
+		_spell_bolt()
 
+func _spell_bolt():
+	var _bolt:PackedScene = load("res://Spells/Bolt.tscn")
+	var _Bolt = _bolt.instance()
+	_Bolt.transform = transform
+	_Bolt.spell = spell
+	get_parent().add_child(_Bolt)
+	emit_signal("spell_used")
 
 func _spell_self():
 	var _spell_strength = spell["FIRE"]+spell["EARTH"]+spell["COLD"]+spell["HEAL"]+spell["AIR"]+spell["PROTECT"]+spell["SHOCK"]+spell["WATER"]
